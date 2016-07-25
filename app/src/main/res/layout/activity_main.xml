@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.std.ramsoapp.view.ContentViewPager
+        android:id="@+id/vp_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/rg_tabbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_business"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/content_business_selector"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:paddingTop="0dp"
+            android:singleLine="true"
+            android:text="业务"
+            android:textSize="12dp"
+            android:textColor="@color/content_textcolor" />
+
+        <RadioButton
+            android:id="@+id/rb_customer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:button="@null"
+            android:drawableTop="@drawable/content_customer_selector"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:paddingTop="0dp"
+            android:singleLine="true"
+            android:text="客户"
+            android:textSize="12dp"
+            android:textColor="@color/content_textcolor" />
+
+        <RadioButton
+            android:id="@+id/rb_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:button="@null"
+            android:drawableTop="@drawable/content_profile_selector"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:paddingTop="0dp"
+            android:singleLine="true"
+            android:text="我的"
+            android:textSize="12dp"
+            android:textColor="@color/content_textcolor" />
+
+        <RadioButton
+            android:id="@+id/rb_box"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:button="@null"
+            android:drawableTop="@drawable/content_box_selector"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:paddingTop="0dp"
+            android:singleLine="true"
+            android:text="百宝箱"
+            android:textSize="12dp"
+            android:textColor="@color/content_textcolor" />
+    </RadioGroup>
+</LinearLayout>

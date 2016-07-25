@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_fault_analyse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
+            android:text="原因分析" />
+
+        <EditText
+            android:id="@+id/et_fault_analyse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_toRightOf="@id/tv_fault_analyse"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tv_fault_treatment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_fault_analyse"
+            android:padding="20dp"
+            android:text="情况处理" />
+
+        <EditText
+            android:id="@+id/et_fault_treatment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/et_fault_analyse"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/tv_fault_treatment"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tv_fault_assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_fault_treatment"
+            android:padding="20dp"
+            android:text="第三方协助" />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/sb_fault_assist"
+            style="@style/SwitchButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/et_fault_astcondition"
+            android:layout_alignLeft="@+id/et_fault_astcondition"
+            android:layout_alignStart="@+id/et_fault_astcondition"
+            android:layout_alignTop="@+id/tv_fault_assist"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/tv_fault_astcondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_fault_assist"
+            android:padding="20dp"
+            android:text="协助情况" />
+
+        <EditText
+            android:id="@+id/et_fault_astcondition"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv_fault_assist"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/tv_fault_astcondition"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tv_fault_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_fault_astcondition"
+            android:padding="20dp"
+            android:text="处理结果" />
+
+        <Spinner
+            android:id="@+id/sp_fault_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_fault_astcondition"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/tv_fault_result"></Spinner>
+
+        <TextView
+            android:id="@+id/tv_fault_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_fault_result"
+            android:padding="20dp"
+            android:text="反馈客户" />
+
+        <EditText
+            android:id="@+id/et_fault_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv_fault_result"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/tv_fault_feedback"
+            android:singleLine="true" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_fault_feedback"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/line_weak_dial" />
+
+        <Button
+            android:id="@+id/bt_upload"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/view_line"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/ic_upload"
+            android:text="上传图片" />
+
+        <Button
+            android:id="@+id/bt_fault_submit"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/bt_upload"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/bg_login"
+            android:gravity="center"
+            android:text="提 交"
+            android:textColor="@color/status_text" />
+
+        <com.shiki.recyclerview.FGORecyclerView
+            android:id="@+id/fault_upload_list"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/bt_fault_submit"
+            android:layout_marginBottom="20dp"
+            app:recyclerviewScrollbars="horizontal"
+            app:recycleviewDispatch="true"></com.shiki.recyclerview.FGORecyclerView>
+
+
+    </RelativeLayout>
+</ScrollView>
+

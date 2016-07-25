@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_fault_list_item"
+    android:layout_margin="5dp" >
+
+    <TextView
+        android:id="@+id/tv_fault_assetname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:text="资产名称"
+        android:textColor="#ff333333"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/view_dash"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/dash_view"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/tv_fault_assetname"
+        />
+
+    <TextView
+        android:id="@+id/tv_fault_termname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_dash"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:text="端点名称"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_fault_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_fault_termname"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="端点地址"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_fault_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_fault_address"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="联系人"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_fault_telephone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_fault_address"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:maxLines="3"
+        android:text="联系电话"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_fault_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_fault_contact"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:text="受理时间："
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_fault_requiredate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_fault_contact"
+        android:gravity="right"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:textColor="@color/fault_color"
+        android:text="最后期限"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_fault_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_fault_date"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:ellipsize="end"
+        android:text="现象描述："
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/tv_fault_desc"
+        android:background="@color/colorPrimary" />
+
+</RelativeLayout>

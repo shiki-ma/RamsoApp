@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_search"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/et_device_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="60dp"
+                android:background="@color/transparent"
+                android:hint="设备名称、端点名称"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1px"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_device_search"
+                android:background="@color/line_weak_dial" />
+
+            <ImageView
+                android:id="@+id/iv_device_search"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_search" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_device_scan"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_scan" />
+    </LinearLayout>
+
+    <com.shiki.recyclerview.FGORecyclerView
+        android:id="@+id/fgo_device_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:recyclerviewScrollbars="vertical"></com.shiki.recyclerview.FGORecyclerView>
+</LinearLayout>
